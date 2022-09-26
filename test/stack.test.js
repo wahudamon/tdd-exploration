@@ -19,7 +19,7 @@ class Stack {
   }
 }
 
-describe("My Stack", () => {
+describe("Stack Tests", () => {
   let stack;
 
   beforeEach(() => {
