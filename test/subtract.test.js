@@ -1,11 +1,7 @@
+import subtract from "../js/subtract";
+
 describe("Subtract Tests", () => {
-  let subtract;
-
-  beforeEach(() => {
-    subtract = require("../js/subtract");
-  });
-
-  it("properly subtract two numbers", () => {
+  test("properly subtract two numbers", () => {
     expect(subtract(4, 1)).toBe(3);
   });
 });
