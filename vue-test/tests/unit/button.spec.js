@@ -16,8 +16,11 @@ describe("SubmitButton.vue", () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it("renders props when passed", () => {
+  it("title props passed to component", () => {
     expect(wrapper.props().title).toMatch(title);
+  });
+
+  it("subtitle props passed to component", () => {
     expect(wrapper.props().subtitle).toMatch(subtitle);
   });
 
