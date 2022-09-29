@@ -3,7 +3,7 @@ import { shallowMount } from "@vue/test-utils";
 
 describe("SubmitButton.vue", () => {
   let wrapper = null;
-  const title = "click me";
+  const title = "Click me";
   const subtitle = "please";
 
   beforeEach(() => {
@@ -19,5 +19,9 @@ describe("SubmitButton.vue", () => {
   it("renders props when passed", () => {
     expect(wrapper.props().title).toMatch(title);
     expect(wrapper.props().subtitle).toMatch(subtitle);
+  });
+
+  it("set title props value on button", () => {
+    expect(wrapper.find("button").text()).toBe(title);
   });
 });

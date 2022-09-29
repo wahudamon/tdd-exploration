@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <button>Click me!</button>
-  </div>
+  <button>{{ title }}</button>
 </template>
 
 <script>

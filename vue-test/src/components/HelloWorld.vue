@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <submit-button />
+    <submit-button title='Click me' subtitle='please' />
   </div>
 </template>
 
