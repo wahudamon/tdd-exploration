@@ -25,6 +25,6 @@ describe("SubmitButton.vue", () => {
   });
 
   it("set title props value on button", () => {
-    expect(wrapper.find("button").text()).toBe(title);
+    expect(wrapper.findComponent("button").text()).toBe(title);
   });
 });
