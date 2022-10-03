@@ -1,19 +1,19 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <submit-button title='Click me' subtitle='please' />
+    <increment-button title='Click me' subtitle='please' />
   </div>
 </template>
 
 <script>
-import SubmitButton from '@/components/Button.vue'
+import IncrementButton from '@/components/Button.vue'
 
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
-  components: {SubmitButton}
+  components: {IncrementButton}
 }
 </script>
 

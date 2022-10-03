@@ -1,13 +1,13 @@
-import SubmitButton from "@/components/Button.vue";
+import IncrementButton from "@/components/Button.vue";
 import { shallowMount } from "@vue/test-utils";
 
-describe("SubmitButton.vue", () => {
+describe("IncrementButton.vue", () => {
   let wrapper = null;
   const title = "Click me";
   const subtitle = "please";
 
   beforeEach(() => {
-    wrapper = shallowMount(SubmitButton, {
+    wrapper = shallowMount(IncrementButton, {
       propsData: { title, subtitle },
     });
   });
@@ -24,7 +24,15 @@ describe("SubmitButton.vue", () => {
     expect(wrapper.props().subtitle).toMatch(subtitle);
   });
 
-  it("set title props value on button", () => {
-    expect(wrapper.findComponent("button").text()).toBe(title);
+  it("increment the count value", async () => {
+    expect(wrapper.findComponent("button").exists()).toBe(true);
+    const button = wrapper.findComponent("button");
+
+    expect(wrapper.vm.$data.count).toEqual(0);
+
+    await button.trigger("click");
+
+    expect(wrapper.vm.$data.count).toEqual(1);
+    expect(button.text()).toBe("Count: 1");
   });
 });
